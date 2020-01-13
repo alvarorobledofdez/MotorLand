@@ -20,7 +20,10 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="index.htm">ListadoController</prop>
+                
+                <!-- Aqui asignamos la pagina htm con el controllador-->
+                <prop key="listado.htm">ListadoController</prop>
+                <prop key="alta.htm">AltaController</prop>
             </props>
         </property>
     </bean>
@@ -37,7 +40,10 @@
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
     
+    <!-- Aqui damos un nombre al controller al que llamamos para luego asignarlo a la pagina web-->
     <bean name="ListadoController" 
           class="Controllers.ListadoController"/>
-
+    
+    <bean name="AltaController" 
+          class="Controllers.AltaController"/>
 </beans>

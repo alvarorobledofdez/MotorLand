@@ -5,10 +5,12 @@ public class Motor {
     private String modelo, fabricante;
     private int potencia, peso, cantidad;
 
+    //Constructor vacio
     public Motor(){
         
     }
-
+    
+    //Constructor con todos los atributos de la clase
     public Motor(String modelo, String fabricante, int potencia, int peso, int cantidad) {
         this.modelo = modelo;
         this.fabricante = fabricante;
@@ -17,8 +19,7 @@ public class Motor {
         this.cantidad = cantidad;
     }
     
-    
-    
+    //Aqui estan los getters y setters de todos los atributos de la clase
     public String getModelo() {
         return modelo;
     }

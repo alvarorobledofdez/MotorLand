@@ -12,11 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class ListadoController {
     private JdbcTemplate jdbc;
     
+    //Creamos el constructor en el cual realizamos la conexion
     public ListadoController() {
         Conexion conexion = new Conexion();
         this.jdbc = new JdbcTemplate(conexion.conectar());
     }
     
+    //Indicamos la pagina a la que va y realizamos la peticion sql a la base de datos para obtener la lista de motores
     @RequestMapping("listado.htm")
     public ModelAndView listado ()
     {
